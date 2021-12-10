@@ -1,3 +1,5 @@
+
+
 class ChatModel {
   String name = 'Whatsapp User';
   String icon = 'profile';
@@ -8,7 +10,7 @@ class ChatModel {
     required this.name,
     required this.icon,
     required this.isGroup,
-    required  this.time,
-    required   this.currentMessage,
+    required this.time,
+    required this.currentMessage,
   });
 }

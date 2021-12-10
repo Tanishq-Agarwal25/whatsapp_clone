@@ -20,32 +20,32 @@ class _ChatPageState extends State<ChatPage> with SingleTickerProviderStateMixin
       icon: "person.svg",
     ),
     ChatModel(
-      name: "Samarth Bansal",
+      name: "We are all one",
+      isGroup: true,
+      currentMessage: "Hi everyone",
+      time: "8:00",
+      icon: "groups.svg",
+    ),
+    ChatModel(
+      name: "Utkarsh Gupta",
       isGroup: false,
       currentMessage: "Hi buddy",
-      time: "5:00",
+      time: "11:00",
       icon: "person.svg",
     ),
     ChatModel(
-      name: "Samarth Bansal",
+      name: "Aryan Vyas",
       isGroup: false,
       currentMessage: "Hi buddy",
-      time: "5:00",
+      time: "9:00",
       icon: "person.svg",
     ),
     ChatModel(
-      name: "Samarth Bansal",
-      isGroup: false,
-      currentMessage: "Hi buddy",
+      name: "Roomies",
+      isGroup: true,
+      currentMessage: "Hi everyone",
       time: "5:00",
-      icon: "person.svg",
-    ),
-    ChatModel(
-      name: "Samarth Bansal",
-      isGroup: false,
-      currentMessage: "Hi buddy",
-      time: "5:00",
-      icon: "person.svg",
+      icon: "groups.svg",
     ),
   ];
   late AnimationController _controller;
@@ -65,16 +65,19 @@ class _ChatPageState extends State<ChatPage> with SingleTickerProviderStateMixin
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    floatingActionButton: FloatingActionButton(
-    onPressed: () {},
-    child: Icon(Icons.chat),
-    ),
-      body: ListView(
-        children: [
-          CustomCard(),
-          CustomCard(),
-        ],
-      )
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(Icons.chat),
+        ),
+        body: ListView(
+          children: [
+            CustomCard(chatModel: chats[0],),
+            CustomCard(chatModel: chats[1],),
+            CustomCard(chatModel: chats[2],),
+            CustomCard(chatModel: chats[3],),
+            CustomCard(chatModel: chats[4],),
+          ],
+        )
     );
   }
 }
